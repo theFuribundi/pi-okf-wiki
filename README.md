@@ -21,11 +21,15 @@ pi install npm:@d1g1tlprim8/pi-okf-wiki
 
 ### Manual Installation (From Source)
 If you are cloning this repository directly from GitHub to modify the source code yourself:
-1. Clone the repository to your machine.
-2. Install it locally using the Pi CLI:
+1. Clone the repository anywhere on your machine (e.g., your Desktop or `~/Projects`).
+   ```bash
+   git clone https://github.com/theFuribundi/pi-okf-wiki.git
+   ```
+2. Navigate to where you cloned it, and install it locally using the Pi CLI:
    ```bash
    pi install ./pi-okf-wiki
    ```
+*(Pi will remember this exact local path, so any edits you make to the source code will immediately reflect in your agent's behavior without needing to move files).*
 
 ## Usage
 
