@@ -47,3 +47,7 @@ These scripts are located in `scripts/` and are called by the agent to perform s
 - `tsx okf-lint.ts <dir>`: Validates frontmatter schema and tags.
 - `tsx okf-graph.ts orphans|backlinks`: Checks the integrity of graph edges.
 - `tsx okf-log.ts append|digest|history`: Interacts with the `log.md` ledger.
+
+## Roadmap
+
+- **Advanced Semantic Search:** Currently, the agent relies on traversing `index.md` to navigate the graph. In a future update, we plan to implement a native, TypeScript-based advanced search architecture (such as BM25, RRF, or GraphRAG) to ensure instant, highly accurate retrieval even when the knowledge graph scales to tens of thousands of nodes.
