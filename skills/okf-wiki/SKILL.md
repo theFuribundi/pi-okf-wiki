@@ -22,6 +22,7 @@ When a user drops a new raw source into the workspace:
 1.  **Capture:** Read the source file from `raw/`.
 2.  **Synthesize:** Draft new concept or entity pages. 
     - Include mandatory YAML frontmatter: `id`, `type`, `created_date`, `status`, and `last_updated`.
+    - **Image Links:** If embedding images from `raw/assets/`, you MUST write highly descriptive semantic `alt text` (e.g., `![System architecture showing Node connecting to Postgres](./raw/assets/diagram.png)`) to ensure image concepts are captured by search indexes.
 3.  **Atomic Write (CRITICAL):** Do not use `echo`, `cat`, or `mv` to create or edit pages! Use your native tools (e.g. `write_to_file`) to write the page, then **IMMEDIATELY** run `npx tsx ~/.pi/agent/skills/okf-wiki/scripts/okf-fs.ts finalize <filepath>`. This will normalize the slug, update the timestamp, and auto-commit to git.
 4.  **Cross-reference:** Update existing notes that this text modifies, strengthens, or contradicts using Obsidian wikilinks `[[note-name]]`. 
 5.  **Log:** Append an entry by running: `npx tsx ~/.pi/agent/skills/okf-wiki/scripts/okf-log.ts append ingest "<Description of what you ingested>"`
